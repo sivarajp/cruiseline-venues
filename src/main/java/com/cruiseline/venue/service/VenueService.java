@@ -1,4 +1,4 @@
-package com.cruiseline.venue;
+package com.cruiseline.venue.service;
 
 import com.cruiseline.venue.model.Venue;
 import com.cruiseline.venue.repository.VenueRepository;
