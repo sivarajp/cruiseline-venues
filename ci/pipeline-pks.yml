@@ -16,7 +16,7 @@ resources:
   - name: resource-deploy-web-app
     type: kubernetes
     source:
-      server: https://((master-ip}}:8443
+      server: https://((master-ip)):8443
       namespace: default
       token: ((kubernetes-dev-token))
       insecure_skip_tls_verify: true
