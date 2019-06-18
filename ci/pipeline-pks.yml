@@ -27,6 +27,7 @@ jobs:
       - get: venue
         trigger: true
       - task: Build project
+        privileged: true
         file: venue/ci/tasks/pack.yml
       - put: resource-deploy-web-app
         params:
