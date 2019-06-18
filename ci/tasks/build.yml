@@ -11,4 +11,4 @@ outputs:
   - name: build-output
 
 run:
-  path: "cruiseline-venue/ci/tasks/build.sh"
+  path: "venue/ci/tasks/build.sh"
