@@ -3,7 +3,7 @@ applications:
   - name: venue
     memory: 768M
     random-route: true
-    path: build-output/venue-0.0.1-SNAPSHOT.jar
+    path: venue-0.0.1-SNAPSHOT.jar
     env:
       SPRING_PROFILES_ACTIVE: cloud
     services:
