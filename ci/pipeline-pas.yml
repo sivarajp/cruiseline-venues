@@ -25,8 +25,8 @@ jobs:
       - task: Build project
         file: cruiseline-venues/ci/tasks/build.yml
       - put: resource-deploy-web-app
-          params:
-            manifest: build-output/manifest.yml
-            environment_variables:
-              key: SPRING_DATA_USERNAME
-              key2: mwright
+        params:
+          manifest: build-output/manifest.yml
+          environment_variables:
+            key: SPRING_DATA_USERNAME
+            key2: mwright
