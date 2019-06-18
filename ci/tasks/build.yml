@@ -1,0 +1,14 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: java, tag: adoptopenjdk-11-alpine}
+
+inputs:
+  - name: spring-boot-concourse
+
+outputs:
+  - name: build-output
+
+run:
+  path: "cruiselines-venue/ci/tasks/build.sh"
