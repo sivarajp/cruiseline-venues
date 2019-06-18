@@ -23,7 +23,7 @@ jobs:
       - get: venue
         trigger: true
       - task: Build project
-        file: cruiseline-venues/ci/tasks/build.yml
+        file: cruiseline-venue/ci/tasks/build.yml
       - put: resource-deploy-web-app
         params:
           manifest: build-output/manifest.yml
