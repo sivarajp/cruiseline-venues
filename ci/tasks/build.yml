@@ -2,7 +2,7 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {repository: adoptopenjdk, tag: x86_64-alpine-jdk-11.0.3_7}
+  source: {repository: adoptopenjdk/openjdk11, tag: x86_64-alpine-jdk-11.0.3_7}
 
 inputs:
   - name: venue
