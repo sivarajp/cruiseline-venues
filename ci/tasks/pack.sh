@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-entrypoint.sh
+source entrypoint.sh
 start_docker
 cd venue
 pack set-default-builder cloudfoundry/cnb:bionic
