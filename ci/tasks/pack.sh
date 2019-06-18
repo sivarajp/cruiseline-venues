@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-entrypoint.sh bash
+entrypoint.sh bash - -ceux - |
 cd venue
 pack set-default-builder cloudfoundry/cnb:bionic
 pack build venue -p .
