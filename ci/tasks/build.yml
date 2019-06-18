@@ -5,7 +5,7 @@ image_resource:
   source: {repository: java, tag: adoptopenjdk-11-alpine}
 
 inputs:
-  - name: cruiseline-venue
+  - name: venue
 
 outputs:
   - name: build-output
