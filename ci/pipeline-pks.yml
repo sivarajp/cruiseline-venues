@@ -1,0 +1,35 @@
+resource_types:
+  - name: kubernetes
+    type: docker-image
+    source:
+      repository: zlabjp/kubernetes-resource
+      tag: "1.14"
+
+resources:
+  - name: venue
+    type: git
+    check_every: 10s
+    source:
+      uri: https://github.com/mwright-pivotal/cruiseline-venues.git
+      branch: master
+
+  - name: resource-deploy-web-app
+    type: kubernetes
+    source:
+      server: https://((master-ip}}:8443
+      namespace: default
+      token: ((kubernetes-dev-token))
+      insecure_skip_tls_verify: true
+jobs:
+  - name: build
+    public: true
+    plan:
+      - get: venue
+        trigger: true
+      - task: Build project
+        file: venue/ci/tasks/pack.yml
+      - put: resource-deploy-web-app
+        params:
+          kubectl: run --name=venue --image=gcr.io/fe-mwright/venue:latest
+          wait_until_ready_selector: app=venue
+          kubeconfig_file: kubeconfig-file/config
