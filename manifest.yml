@@ -3,8 +3,10 @@ applications:
   - name: venue
     memory: 768M
     random-route: true
+    buildpack: https://github.com/cloudfoundry/java-buildpack
     path: venue-0.0.1-SNAPSHOT.jar
     env:
       SPRING_PROFILES_ACTIVE: cloud
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculator: { stack_threads: 25 } }'
     services:
       - venue-db
