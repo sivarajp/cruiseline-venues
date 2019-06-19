@@ -33,6 +33,5 @@ jobs:
           GOOGLE_TOKEN: ((google-token))
       - put: resource-deploy-web-app
         params:
-          kubectl: run --name=venue --image=gcr.io/fe-mwright/venue:latest
+          kubectl: run venue --image=gcr.io/fe-mwright/cruiseline/venue:latest --port=8080
           wait_until_ready_selector: app=venue
-          kubeconfig_file: kubeconfig-file/config
