@@ -101,7 +101,7 @@ start_docker() {
 
   # Use Concourse's scratch volume to bypass the graph filesystem by default
   if [[ "${docker_opts}" != *'--data-root'* ]] && [[ "${docker_opts}" != *'--graph'* ]]; then
-    docker_opts+=' --data-root /scratch/docker'
+    docker_opts="${docker_opts} --data-root /scratch/docker"
   fi
 
   rm -f "${DOCKERD_PID_FILE}"
