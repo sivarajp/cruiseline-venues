@@ -29,6 +29,8 @@ jobs:
       - task: Build project
         privileged: true
         file: venue/ci/tasks/pack.yml
+        params:
+          GOOGLE_TOKEN: ((google-token))
       - put: resource-deploy-web-app
         params:
           kubectl: run --name=venue --image=gcr.io/fe-mwright/venue:latest

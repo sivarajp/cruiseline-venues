@@ -4,6 +4,9 @@ image_resource:
   type: docker-image
   source: {repository: gcr.io/fe-mwright/cruiseline/pack, tag: latest}
 
+params:
+  GOOGLE_TOKEN
+
 inputs:
   - name: venue
 
