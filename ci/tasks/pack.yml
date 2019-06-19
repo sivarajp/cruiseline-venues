@@ -5,7 +5,7 @@ image_resource:
   source: {repository: gcr.io/fe-mwright/cruiseline/pack, tag: latest}
 
 params:
-  GOOGLE_TOKEN
+  GOOGLE_TOKEN:
 
 inputs:
   - name: venue
