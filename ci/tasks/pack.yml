@@ -7,6 +7,10 @@ image_resource:
 params:
   GOOGLE_TOKEN:
   KUBE_CONFIG:
+  DOCKER_IMAGE:
+  DOCKER_USERNAME:
+  DOCKER_PASSWORD:
+  DOCKER_REGISTRY:
 
 inputs:
   - name: venue
