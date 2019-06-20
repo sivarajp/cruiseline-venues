@@ -19,6 +19,7 @@ resources:
       server: https://((master-ip)):8443
       namespace: default
       token: ((kubernetes-dev-token))
+      context: dev
       insecure_skip_tls_verify: true
 jobs:
   - name: build
