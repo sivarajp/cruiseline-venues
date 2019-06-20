@@ -36,8 +36,8 @@ jobs:
           DOCKER_USERNAME: ((docker-username))
           DOCKER_PASSWORD: ((docker-password))
           DOCKER_REGISTRY: ((docker-registry))
-       - task: Deploy to Kubernetes
-         file: venue/ci/tasks/deploy-to-k8s.yml
+      - task: Deploy to Kubernetes
+        file: venue/ci/tasks/deploy-to-k8s.yml
 #      - put: resource-deploy-web-app
 #        params:
 #          kubectl: create -f build-output/deployment.yml
