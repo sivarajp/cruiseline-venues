@@ -12,7 +12,7 @@ resources:
       api: ((cf-api))
       username: ((cf-username))
       password: ((cf-password))
-      organization: (cf-org))
+      organization: ((cf-org))
       space: ((cf-space))
       skip_cert_check: false
 
