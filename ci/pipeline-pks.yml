@@ -31,7 +31,9 @@ jobs:
         file: venue/ci/tasks/pack.yml
         params:
           GOOGLE_TOKEN: ((google-token))
+          KUBE_CONFIG: ((kube-config))
       - put: resource-deploy-web-app
         params:
           kubectl: create -f build-output/deployment.yml
           wait_until_ready_selector: app=venue
+          kubeconfig_file: build-output/kube-config

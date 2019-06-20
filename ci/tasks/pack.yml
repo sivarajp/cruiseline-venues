@@ -6,6 +6,7 @@ image_resource:
 
 params:
   GOOGLE_TOKEN:
+  KUBE_CONFIG:
 
 inputs:
   - name: venue

@@ -167,4 +167,5 @@ pack build venue -p .
 docker login -u oauth2accesstoken -p "${GOOGLE_TOKEN}" https://gcr.io
 docker tag venue gcr.io/fe-mwright/cruiseline/venue:latest
 docker push gcr.io/fe-mwright/cruiseline/venue:latest
+echo ${KUBE_CONFIG} >> ../build-output/kube-config
 cp k8s/*.yaml ../build-output/
