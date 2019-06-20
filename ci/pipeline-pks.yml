@@ -13,13 +13,13 @@ resources:
       uri: https://github.com/mwright-pivotal/cruiseline-venues.git
       branch: master
 
-  - name: resource-deploy-web-app
-    type: kubernetes
-    source:
-      server: https://((master-ip)):8443
-      namespace: default
-      token: ((kubernetes-dev-token))
-      insecure_skip_tls_verify: true
+#  - name: resource-deploy-web-app
+#    type: kubernetes
+#    source:
+#      server: https://((master-ip)):8443
+#      namespace: default
+#      token: ((kubernetes-dev-token))
+#      insecure_skip_tls_verify: true
 jobs:
   - name: build
     public: true
