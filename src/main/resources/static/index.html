@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="venuedemo">
+	<head>
+		<title>Venue Details</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script src="venue.js"></script>
+		<style>
+		table {
+		  border-collapse: collapse;
+		}
+		
+		table, td, th {
+		  padding: 10px;	
+		  text-align: left;
+		  border: 1px solid gray;
+		  font-size: 14px;
+		}
+		</style>    	
+	</head>
+
+	<body>
+		<table ng-controller="Venue" border="1">
+			<tr>
+				<td><b>Venue Name</b></td>
+				<td><b>Reservation Id</b></td>
+				<td><b>Booking Date</b></td>
+				<td><b>Available</b></td>
+				<td><b>Active</b></td>
+			</tr>
+			<tr ng-repeat="venue in venuelist | orderBy: '-bookingDate'" >
+		  		<td>{{venue.venueName}}</td>
+		  		<td>{{venue.reservationId}}</td>
+		  		<td>{{venue.bookingDate}}</td>
+		  		<td>{{venue.available}}</td>
+		  		<td>{{venue.active}}</td>
+			</tr>
+		</table>
+	</body>
+</html>
