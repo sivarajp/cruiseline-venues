@@ -36,8 +36,6 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
         envFrom:
           - configMapRef:
-              name: env-common
-          - configMapRef:
               name: {{ template "fullname" . }}
         resources:
           requests:
