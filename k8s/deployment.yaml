@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: venue
-          image: gcr.io/fe-mwright/cruiseline/venue:latest
+          image: harbor.haas-245.pez.pivotal.io/ship-side/venue:latest
           ports:
             - containerPort: 8080
               name: server

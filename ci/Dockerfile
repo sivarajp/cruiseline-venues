@@ -31,4 +31,5 @@ ADD https://github.com/buildpack/pack/releases/download/v0.2.1/pack-v0.2.1-linux
 RUN tar -C /usr/local/bin -xvzf /tmp/pack-v0.2.1-linux.tgz
 
 RUN gcloud auth configure-docker
-
+RUN mkdir /etc/docker;mkdir /etc/docker/certs.d;mkdir /etc/docker/certs.d/harbor.haas-245.pez.pivotal.io
+COPY ca.crt /etc/docker/certs.d/harbor.haas-245.pez.pivotal.io/
