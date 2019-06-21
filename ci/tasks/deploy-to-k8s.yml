@@ -6,6 +6,7 @@ image_resource:
 
 inputs:
   - name: build-output
+  - name: venue
 
 outputs:
   - name: build-output
