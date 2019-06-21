@@ -5,7 +5,7 @@ image_resource:
   source: {repository: gcr.io/fe-mwright/cruiseline/tools, tag: latest}
 
 inputs:
-  - name: venue
+  - name: build-output
 
 outputs:
   - name: build-output
