@@ -1,5 +1,8 @@
 package com.cruiseline.venue.controller;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +27,7 @@ public class VenueController {
     @Autowired
     MeterRegistry registry;
 
+    Logger logger = LoggerFactory.getLogger(VenueController.class);
 
     @ApiOperation(
             value = "Find all venue records for a given page and size",
@@ -34,6 +38,9 @@ public class VenueController {
     	
     	// counter to count different types of messages received
         registry.counter("custom.metrics.numofcalls").increment();
+        
+        logger.debug("THIS IS A DEBUG MSG - VENUE CONTROLLER");
+        
         return venueService.list();
     }
 
