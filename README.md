@@ -7,3 +7,5 @@ Pivotal Build Service is used to automatically create a docker image from git co
 The entire process, the cluster, building and testing the app, clean up can be entirely ephemeral saving value cloud resources when no dev is in active progress.
 
 Used for demo purposes
+
+Update counter for demo: 1
