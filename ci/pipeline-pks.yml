@@ -36,12 +36,18 @@ jobs:
           DOCKER_USERNAME: ((docker-username))
           DOCKER_PASSWORD: ((docker-password))
           DOCKER_REGISTRY: ((docker-registry))
+
+  - name: deploy
+    serial: true
+    plan:
+      - get: venue
       - task: Deploy to Kubernetes
-        file: venue/ci/tasks/deploy-to-k8s.yml
-        privileged: true
+          file: venue/ci/tasks/deploy-to-k8s.yml
+          privileged: true
 #      - put: resource-deploy-web-app
 #        params:
 #          kubectl: create -f build-output/deployment.yml
 #          wait_until_ready_selector: app=venue
 #          context: dev
 #          kubeconfig_file: build-output/kube-config
+

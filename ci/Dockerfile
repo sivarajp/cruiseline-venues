@@ -30,6 +30,9 @@ ENV PATH $PATH:/root/google-cloud-sdk/bin
 ADD https://github.com/buildpack/pack/releases/download/v0.2.1/pack-v0.2.1-linux.tgz /tmp/
 RUN tar -C /usr/local/bin -xvzf /tmp/pack-v0.2.1-linux.tgz
 
+COPY pb-linux-0.0.3-rc.41 /usr/local/bin/pb
+RUN chmod a+x /usr/local/bin/pb
+
 RUN gcloud auth configure-docker
-RUN mkdir /etc/docker;mkdir /etc/docker/certs.d;mkdir /etc/docker/certs.d/harbor.haas-245.pez.pivotal.io
-COPY ca.crt /etc/docker/certs.d/harbor.haas-245.pez.pivotal.io/
+# RUN mkdir /etc/docker;mkdir /etc/docker/certs.d;mkdir /etc/docker/certs.d/harbor.haas-245.pez.pivotal.io
+# COPY ca.crt /etc/docker/certs.d/harbor.haas-245.pez.pivotal.io/
