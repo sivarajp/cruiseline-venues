@@ -24,7 +24,6 @@ public class VenueController {
     @Autowired
     MeterRegistry registry;
 
-
     @ApiOperation(
             value = "Find all venue records for a given page and size",
             notes = "Expensive operation as it retrieves all the records", response = Venue.class)
