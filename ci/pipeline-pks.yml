@@ -12,7 +12,15 @@ resources:
     source:
       uri: https://github.com/mwright-pivotal/cruiseline-venues.git
       branch: master
-
+  - name: kubernetes-dev
+    type: kubernetes
+    source:
+#      server: https://dev-aks-1ec183ca.hcp.eastus.azmk8s.io:443
+#      namespace: default
+#      token: ((kubernetes-dev-token))
+      kubeconfig: ((kube-config))
+#      certificate_authority: ((kubernetes-dev-cert))
+#      insecure_skip_tls_verify: true
 #  - name: resource-deploy-web-app
 #    type: kubernetes
 #    source:
@@ -36,9 +44,14 @@ jobs:
 #          DOCKER_USERNAME: ((docker-username))
 #          DOCKER_PASSWORD: ((docker-password))
 #          DOCKER_REGISTRY: ((docker-registry))
-  - name: build-docker-image
+  - name: Test Scan and Dockerize
+    serial: true
+    public: true
     plan:
     - get: venues
+      trigger: true
+    - task: test
+      file: venues/ci/tasks/build.yml
     - task: build-concourse-lifecycle-task-bionic-image
       config:
         platform: linux
@@ -60,16 +73,18 @@ jobs:
         inputs:
         - name: venues
         run: {path: /lifecycle-task/launch.sh}
-  - name: deploy
+  - name: Deploy to AKS
     serial: true
+    public: true
     plan:
-      - get: venues
-      - task: Deploy to Kubernetes
-        file: venues/ci/tasks/deploy-to-k8s.yml
-        privileged: true
-        config:
-          params:
-            KUBECONFIG: ((kube-config))
+    - get: venues
+      trigger: true
+      passed:
+        - Test Scan and Dockerize
+    - put: kubernetes-dev
+      params:
+        kubectl: apply -f venues/k8s/deployment.yaml
+        wait_until_ready_selector: app=venues
 #      - put: resource-deploy-web-app
 #        params:
 #          kubectl: create -f build-output/deployment.yml

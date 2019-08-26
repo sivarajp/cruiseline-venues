@@ -5,10 +5,10 @@ image_resource:
   source: {repository: adoptopenjdk/openjdk11, tag: x86_64-alpine-jdk-11.0.3_7}
 
 inputs:
-  - name: venue
+  - name: venues
 
 outputs:
   - name: build-output
 
 run:
-  path: "venue/ci/tasks/build.sh"
+  path: "venues/ci/tasks/build.sh"
