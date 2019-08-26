@@ -5,11 +5,7 @@ image_resource:
   source: {repository: gcr.io/fe-mwright/cruiseline/tools, tag: latest}
 
 inputs:
-  - name: build-output
-  - name: venue
-
-outputs:
-  - name: build-output
+  - name: venues
 
 run:
-  path: "venue/ci/tasks/deploy-to-k8s.sh"
+  path: "venues/ci/tasks/deploy-to-k8s.sh"
