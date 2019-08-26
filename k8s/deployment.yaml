@@ -13,10 +13,12 @@ spec:
         app: venue
     spec:
       containers:
-        - name: venue
-          image: harbor.haas-245.pez.pivotal.io/ship-side/venue:latest
-          ports:
-            - containerPort: 8080
-              name: server
-            - containerPort: 8081
-              name: management
+      - name: venue
+        image: mwrightregistry.azurecr.io/cruiseline-venues:latest
+        ports:
+        - containerPort: 8080
+          name: server
+        - containerPort: 8081
+          name: management
+      imagePullSecrets:
+      - name: acr-auth

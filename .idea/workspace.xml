@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87d4848f-9814-46e3-a185-2c894b13b4e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/k8s/svc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/svc.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cruiseline/venue/controller/VenueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cruiseline/venue/controller/VenueController.java" afterDir="false" />
+    <list default="true" id="81e4b92a-bb8a-4d1c-9c41-999273ac0814" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ci/pipeline-pks.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ci/pipeline-pks.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -14,58 +13,102 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
+<<<<<<< HEAD
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
+=======
+    <option name="isMigrated" value="true" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1485">
               <caret line="99" column="25" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="25" />
+=======
+        <entry file="file://$PROJECT_DIR$/ci/pipeline-pas.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+=======
+        <entry file="file://$PROJECT_DIR$/manifest.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ci/tasks/deploy-to-k8s.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ci/pipeline-pks.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/ci/pipeline-pas.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+=======
+        <entry file="file://$PROJECT_DIR$/k8s/configmap.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/ci/tasks/pack.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="9" selection-start-column="9" selection-end-column="9" />
+=======
+        <entry file="file://$PROJECT_DIR$/ci/tasks/build.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/ci/tasks/deploy-to-k8s.yml">
+=======
+        <entry file="file://$PROJECT_DIR$/ci/tasks/pack.yml">
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
@@ -74,6 +117,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/ci/pipeline-pks.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
@@ -99,21 +143,35 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+=======
+        <entry file="file://$PROJECT_DIR$/ci/tasks/pack.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2550">
+              <caret line="170" column="50" selection-start-line="170" selection-start-column="50" selection-end-line="170" selection-end-column="50" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/ci/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
               <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+=======
+        <entry file="file://$PROJECT_DIR$/k8s/svc.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -126,12 +184,15 @@
       <find>mount</find>
     </findStrings>
   </component>
+=======
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/cruiseline/venue/VenueService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cruiseline/venue/model/Venue.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cruiseline/venue/actuator/VenueHealthIndicator.java" />
@@ -156,6 +217,18 @@
         <option value="$PROJECT_DIR$/ci/tasks/deploy-to-k8s.yml" />
         <option value="$PROJECT_DIR$/ci/tasks/deploy-to-k8s.sh" />
         <option value="$PROJECT_DIR$/src/main/java/com/cruiseline/venue/controller/VenueController.java" />
+=======
+        <option value="$PROJECT_DIR$/ci/pipeline-pas.yml" />
+        <option value="$PROJECT_DIR$/ci/tasks/build.yml" />
+        <option value="$PROJECT_DIR$/ci/tasks/build.sh" />
+        <option value="$PROJECT_DIR$/k8s/configmap.yaml" />
+        <option value="$PROJECT_DIR$/k8s/deployment.yaml" />
+        <option value="$PROJECT_DIR$/k8s/svc.yaml" />
+        <option value="$PROJECT_DIR$/manifest.yml" />
+        <option value="$PROJECT_DIR$/ci/tasks/pack.sh" />
+        <option value="$PROJECT_DIR$/ci/tasks/pack.yml" />
+        <option value="$PROJECT_DIR$/ci/pipeline-pks.yml" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
       </list>
     </option>
   </component>
@@ -167,24 +240,36 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="125" />
     <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="931" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+    <option name="x" value="50" />
+    <option name="y" value="39" />
+    <option name="width" value="1400" />
+    <option name="height" value="784" />
+  </component>
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="Scope" />
+=======
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="venue" type="b2602c69:ProjectViewProjectNode" />
+<<<<<<< HEAD
               <item name="venue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -221,11 +306,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="venue" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="cruiseline-venues" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="venue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cruiseline-venues" type="462c0819:PsiDirectoryNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="venue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cruiseline-venues" type="462c0819:PsiDirectoryNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,6 +350,22 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ci/tasks" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+=======
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/k8s" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/k8s" />
+      <recent name="$PROJECT_DIR$/ci" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
     </key>
   </component>
   <component name="RunDashboard">
@@ -264,6 +380,7 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Docker.ci/Dockerfile">
     <configuration name="All in venue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="venue" />
@@ -329,16 +446,38 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533137" />
+=======
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81e4b92a-bb8a-4d1c-9c41-999273ac0814" name="Default Changelist" comment="" />
+      <created>1560883105944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560883105944</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="50" y="39" width="1400" height="784" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2569956" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" weight="0.32896304" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32896304" />
+=======
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Docker" order="7" visible="true" weight="0.32896304" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
@@ -471,12 +610,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="67" selection-start-column="67" selection-end-column="67" />
+=======
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ci/Dockerfile-pack" />
+    <entry file="file://$PROJECT_DIR$/ci/tasks/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/k8s/deployment.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
+<<<<<<< HEAD
           <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
         </state>
       </provider>
@@ -518,12 +676,48 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ci/tasks/deploy-to-k8s.yml">
+=======
+          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci/pipeline-pas.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k8s/configmap.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci/tasks/build.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci/tasks/pack.yml">
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ci/pipeline-pks.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -552,6 +746,26 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/ci/tasks/pack.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="170" column="50" selection-start-line="170" selection-start-column="50" selection-end-line="170" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k8s/svc.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci/pipeline-pks.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
         </state>
       </provider>
     </entry>
@@ -560,7 +774,11 @@
     <states>
       <state key="ProjectJDKs.UI">
         <settings>
+<<<<<<< HEAD
           <last-edited>11</last-edited>
+=======
+          <last-edited>1.8</last-edited>
+>>>>>>> 58e86d913654f375dbeae0a6007eba40d5a76025
           <splitter-proportions>
             <option name="proportions">
               <list>
