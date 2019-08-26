@@ -67,6 +67,9 @@ jobs:
       - task: Deploy to Kubernetes
         file: venues/ci/tasks/deploy-to-k8s.yml
         privileged: true
+        config:
+          params:
+            KUBECONFIG: ((kube-config))
 #      - put: resource-deploy-web-app
 #        params:
 #          kubectl: create -f build-output/deployment.yml

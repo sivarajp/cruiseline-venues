@@ -7,5 +7,8 @@ image_resource:
 inputs:
   - name: venues
 
+params:
+  KUBECONFIG: 
+
 run:
   path: "venues/ci/tasks/deploy-to-k8s.sh"
