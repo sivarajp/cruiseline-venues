@@ -53,6 +53,7 @@ jobs:
     - task: test
       file: venues/ci/tasks/build.yml
     - task: build-concourse-lifecycle-task-bionic-image
+      privileged: true
       config:
         platform: linux
         image_resource:
@@ -73,6 +74,9 @@ jobs:
         inputs:
         - name: venues
         run: {path: /lifecycle-task/launch.sh}
+        caches:
+          - path: /layers
+          - path: /cache
   - name: Deploy to AKS
     serial: true
     public: true
