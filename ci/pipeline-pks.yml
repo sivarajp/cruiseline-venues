@@ -45,7 +45,7 @@ jobs:
 #          DOCKER_USERNAME: ((docker-username))
 #          DOCKER_PASSWORD: ((docker-password))
 #          DOCKER_REGISTRY: ((docker-registry))
-  - name: Test Scan and Dockerize
+  - name: Build & Test
     serial: true
     public: true
     plan:
@@ -53,6 +53,27 @@ jobs:
       trigger: true
     - task: test
       file: venues/ci/tasks/build.yml
+  - name: Security Scan
+    serial: true
+    public: true
+    plan:
+    - get: venues
+      trigger: true
+    - task: scan
+      file: venues/ci/tasks/snyk.yml
+      vars:
+        REGISTRY_USERNAME: ((docker-username))
+        REGISTRY_PASSWORD: ((docker-password))
+      params:
+        SNYK_TOKEN: ((snyk-token))
+  - name: Dockerize
+    serial: true
+    public: true
+    plan:
+    - get: venues
+      trigger: true
+      passed: 
+        - Build & Test
     - task: build-concourse-lifecycle-task-bionic-image
       privileged: true
       config:
@@ -85,13 +106,15 @@ jobs:
     - get: venues
       trigger: true
       passed:
-        - Test Scan and Dockerize
+        - Dockerize
     - task: kapp deploy
       file: venues/ci/tasks/kapp.yml
       params:
         KUBECONFIG: ((kube-config))
+      vars:
         REGISTRY_USERNAME: ((docker-username))
         REGISTRY_PASSWORD: ((docker-password))
+
   - name: Deploy to AKS (k8s resource)
     serial: true
     public: true
@@ -99,7 +122,7 @@ jobs:
     - get: venues
       trigger: true
       passed:
-        - Test Scan and Dockerize
+        - Dockerize
     - put: kubernetes-dev
       params:
         kubectl: apply -f venues/k8s/deployment.yaml
