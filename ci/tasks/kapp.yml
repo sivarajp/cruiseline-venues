@@ -5,8 +5,8 @@ image_resource:
   source: 
     repository: mwrightregistry.azurecr.io/tools
     tag: latest
-    username: ["((docker-username))"]
-    password: ["((docker-password))"]
+    username: ((REGISTRY_USERNAME))
+    password: ((REGISTRY_PASSWORD))
 
 inputs:
   - name: venues
@@ -14,8 +14,6 @@ inputs:
 params:
   KUBECONFIG: 
   CONTEXT: 
-  REGISTRY_USERNAME:
-  REGISTRY_PASSWORD:
 
 run:
   path: "venues/ci/tasks/kapp.sh"
