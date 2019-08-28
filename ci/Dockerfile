@@ -13,6 +13,8 @@ RUN apk --update --no-cache add \
         py-pip \
         iptables \
         ca-certificates \
+        perl \
+        perl-utils \
         && \
     apk upgrade && \
     curl -fL "https://download.docker.com/linux/static/${DOCKER_CHANNEL}/x86_64/docker-${DOCKER_VERSION}.tgz" | tar zx && \
@@ -24,6 +26,8 @@ RUN apk --update --no-cache add \
     rm -rf /root/.cache
 
 RUN curl -sSL https://sdk.cloud.google.com | bash
+
+RUN wget -O- https://k14s.io/install.sh | bash
 
 ENV PATH $PATH:/root/google-cloud-sdk/bin
 

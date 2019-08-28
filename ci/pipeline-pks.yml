@@ -15,10 +15,11 @@ resources:
   - name: kubernetes-dev
     type: kubernetes
     source:
-#      server: https://dev-aks-1ec183ca.hcp.eastus.azmk8s.io:443
+      server: https://dev-aks-1ec183ca.hcp.eastus.azmk8s.io:443
 #      namespace: default
 #      token: ((kubernetes-dev-token))
       kubeconfig: ((kube-config))
+      context: dev
 #      certificate_authority: ((kubernetes-dev-cert))
 #      insecure_skip_tls_verify: true
 #  - name: resource-deploy-web-app
@@ -77,7 +78,19 @@ jobs:
         caches:
           - path: /layers
           - path: /cache
-  - name: Deploy to AKS
+  - name: Deploy to AKS (kapp)
+    serial: true
+    public: true
+    plan:
+    - get: venues
+      trigger: true
+      passed:
+        - Test Scan and Dockerize
+    - task: kapp deploy
+      file: venue/ci/tasks/kapp.yml
+      params:
+        KUBECONFIG: ((kube-config))
+  - name: Deploy to AKS (k8s resource)
     serial: true
     public: true
     plan:

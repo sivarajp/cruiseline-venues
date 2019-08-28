@@ -2,7 +2,7 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {repository: gcr.io/fe-mwright/cruiseline/tools, tag: latest}
+  source: {repository: mwrightregistry.azurecr.io/tools, tag: latest}
 
 inputs:
   - name: venues
@@ -12,4 +12,4 @@ params:
   CONTEXT: 
 
 run:
-  path: "venues/ci/tasks/deploy-to-k8s.sh"
+  path: "venues/ci/tasks/kapp.sh"
