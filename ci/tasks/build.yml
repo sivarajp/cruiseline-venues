@@ -10,5 +10,8 @@ inputs:
 outputs:
   - name: build-output
 
+caches:
+  - path: maven
+
 run:
   path: "venues/ci/tasks/build.sh"

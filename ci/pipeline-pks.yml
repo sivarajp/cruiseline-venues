@@ -87,9 +87,11 @@ jobs:
       passed:
         - Test Scan and Dockerize
     - task: kapp deploy
-      file: venue/ci/tasks/kapp.yml
+      file: venues/ci/tasks/kapp.yml
       params:
         KUBECONFIG: ((kube-config))
+        REGISTRY_USERNAME: ((docker-username))
+        REGISTRY_PASSWORD: ((docker-password))
   - name: Deploy to AKS (k8s resource)
     serial: true
     public: true
