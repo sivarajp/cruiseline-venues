@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.8
 
 ENV DOCKER_CHANNEL=stable \
     DOCKER_VERSION=18.09.6 \
@@ -15,6 +15,8 @@ RUN apk --update --no-cache add \
         ca-certificates \
         perl \
         perl-utils \
+        libstdc++ \
+        npm \
         && \
     apk upgrade && \
     curl -fL "https://download.docker.com/linux/static/${DOCKER_CHANNEL}/x86_64/docker-${DOCKER_VERSION}.tgz" | tar zx && \
@@ -38,5 +40,7 @@ COPY pb-linux-0.0.3-rc.41 /usr/local/bin/pb
 RUN chmod a+x /usr/local/bin/pb
 
 RUN gcloud auth configure-docker
+
+RUN npm install -g snk
 # RUN mkdir /etc/docker;mkdir /etc/docker/certs.d;mkdir /etc/docker/certs.d/harbor.haas-245.pez.pivotal.io
 # COPY ca.crt /etc/docker/certs.d/harbor.haas-245.pez.pivotal.io/

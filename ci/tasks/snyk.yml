@@ -14,8 +14,9 @@ inputs:
 params:
   KUBECONFIG: 
   CONTEXT: 
+  SNYK_TOKEN:
   REGISTRY_USERNAME:
   REGISTRY_PASSWORD:
 
 run:
-  path: "venues/ci/tasks/kapp.sh"
+  path: "venues/ci/tasks/snyk.sh"
