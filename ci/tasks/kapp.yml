@@ -5,8 +5,8 @@ image_resource:
   source: 
     repository: mwrightregistry.azurecr.io/tools
     tag: latest
-    username: ((REGISTRY_USERNAME))
-    password: ((REGISTRY_PASSWORD))
+    username: ["((REGISTRY_USERNAME))"]
+    password: ["((REGISTRY_PASSWORD))"]
 
 inputs:
   - name: venues
