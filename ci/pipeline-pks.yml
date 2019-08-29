@@ -18,8 +18,8 @@ resources:
       server: https://dev-aks-1ec183ca.hcp.eastus.azmk8s.io:443
 #      namespace: default
 #      token: ((kubernetes-dev-token))
-      kubeconfig: ((kube-config))
-      context: dev
+      kubeconfig: ((kube-config-aks))
+      context: pbs-dev
 #      certificate_authority: ((kubernetes-dev-cert))
 #      insecure_skip_tls_verify: true
 #  - name: resource-deploy-web-app
@@ -99,7 +99,7 @@ jobs:
         caches:
           - path: /layers
           - path: /cache
-  - name: Deploy to AKS (kapp)
+  - name: Deploy to PKS (kapp)
     serial: true
     public: true
     plan:
@@ -110,7 +110,7 @@ jobs:
     - task: kapp deploy
       file: venues/ci/tasks/kapp.yml
       params:
-        KUBECONFIG: ((kube-config))
+        KUBECONFIG_CONTENTS: ((kube-config-aks))
       vars:
         REGISTRY_USERNAME: ((docker-username))
         REGISTRY_PASSWORD: ((docker-password))
