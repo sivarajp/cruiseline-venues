@@ -21,4 +21,4 @@ spec:
         - containerPort: 8081
           name: management
       imagePullSecrets:
-      - name: acr-auth
+      - name: regcred
