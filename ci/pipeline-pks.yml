@@ -17,6 +17,7 @@ resources:
     source:
       kubeconfig: ((kube-config-aks))
       context: pbs-dev
+
 jobs:
   - name: Build & Test
     serial: true
@@ -26,7 +27,8 @@ jobs:
       trigger: true
     - task: test
       file: venues/ci/tasks/build.yml
-  - name: Security Scan
+
+  - name: Vulnerability Scan using Snyk
     serial: true
     public: true
     plan:
@@ -39,6 +41,7 @@ jobs:
         REGISTRY_PASSWORD: ((docker-password))
       params:
         SNYK_TOKEN: ((snyk-token))
+
   - name: Dockerize with CNB
     serial: true
     public: true
@@ -72,6 +75,7 @@ jobs:
         caches:
           - path: /layers
           - path: /cache
+          
   - name: Deploy to PKS (kapp)
     serial: true
     public: true
@@ -95,7 +99,7 @@ jobs:
     - get: venues
       trigger: true
       passed:
-        - Dockerize
+        - Dockerize with CNB
     - put: kubernetes-dev
       params:
         kubectl: apply -f venues/k8s/deployment.yaml -f venues/k8s/svc.yaml
