@@ -12,7 +12,7 @@ inputs:
   - name: venues
 
 params:
-  KUBECONFIG: 
+  KUBECONFIG_CONTENTS: 
   CONTEXT: 
 
 run:

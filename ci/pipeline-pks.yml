@@ -110,7 +110,7 @@ jobs:
     - task: kapp deploy
       file: venues/ci/tasks/kapp.yml
       params:
-        KUBECONFIG_CONTENTS: ((kube-config-aks))
+        KUBECONFIG_CONTENTS: ((kube-config-pks))
       vars:
         REGISTRY_USERNAME: ((docker-username))
         REGISTRY_PASSWORD: ((docker-password))
