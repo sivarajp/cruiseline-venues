@@ -15,36 +15,9 @@ resources:
   - name: kubernetes-dev
     type: kubernetes
     source:
-      server: https://dev-aks-1ec183ca.hcp.eastus.azmk8s.io:443
-#      namespace: default
-#      token: ((kubernetes-dev-token))
       kubeconfig: ((kube-config-aks))
       context: pbs-dev
-#      certificate_authority: ((kubernetes-dev-cert))
-#      insecure_skip_tls_verify: true
-#  - name: resource-deploy-web-app
-#    type: kubernetes
-#    source:
-#      server: https://((master-ip)):8443
-#      namespace: default
-#      token: ((kubernetes-dev-token))
-#      insecure_skip_tls_verify: true
 jobs:
-#  - name: build
-#    public: true
-#    plan:
-#      - get: venue
-#        trigger: true
-#      - task: Build project
-#        privileged: true
-#        file: venue/ci/tasks/pack.yml
-#        params:
-#          GOOGLE_TOKEN: ((google-token))
-#          KUBE_CONFIG: ((kube-config))
-#          DOCKER_IMAGE: ((docker-image))
-#          DOCKER_USERNAME: ((docker-username))
-#          DOCKER_PASSWORD: ((docker-password))
-#          DOCKER_REGISTRY: ((docker-registry))
   - name: Build & Test
     serial: true
     public: true
@@ -125,12 +98,6 @@ jobs:
         - Dockerize
     - put: kubernetes-dev
       params:
-        kubectl: apply -f venues/k8s/deployment.yaml
+        kubectl: apply -f venues/k8s/deployment.yaml -f venues/k8s/svc.yaml
         wait_until_ready_selector: app=venues
-#      - put: resource-deploy-web-app
-#        params:
-#          kubectl: create -f build-output/deployment.yml
-#          wait_until_ready_selector: app=venue
-#          context: dev
-#          kubeconfig_file: build-output/kube-config
 
