@@ -41,6 +41,6 @@ RUN chmod a+x /usr/local/bin/pb
 
 RUN gcloud auth configure-docker
 
-RUN npm install -g snk
+RUN npm install -g snyk
 # RUN mkdir /etc/docker;mkdir /etc/docker/certs.d;mkdir /etc/docker/certs.d/harbor.haas-245.pez.pivotal.io
 # COPY ca.crt /etc/docker/certs.d/harbor.haas-245.pez.pivotal.io/
