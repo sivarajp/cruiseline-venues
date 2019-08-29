@@ -17,6 +17,7 @@ RUN apk --update --no-cache add \
         perl-utils \
         libstdc++ \
         npm \
+        maven \
         && \
     apk upgrade && \
     curl -fL "https://download.docker.com/linux/static/${DOCKER_CHANNEL}/x86_64/docker-${DOCKER_VERSION}.tgz" | tar zx && \
