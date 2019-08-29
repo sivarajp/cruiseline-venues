@@ -39,7 +39,7 @@ jobs:
         REGISTRY_PASSWORD: ((docker-password))
       params:
         SNYK_TOKEN: ((snyk-token))
-  - name: Dockerize
+  - name: Dockerize with CNB
     serial: true
     public: true
     plan:
@@ -79,7 +79,7 @@ jobs:
     - get: venues
       trigger: true
       passed:
-        - Dockerize
+        - Dockerize with CNB
     - task: kapp deploy
       file: venues/ci/tasks/kapp.yml
       params:
