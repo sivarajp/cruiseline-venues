@@ -8,4 +8,4 @@ The entire process, the cluster, building and testing the app, clean up can be e
 
 Used for demo purposes
 
-Update counter for demo: 2
+Update counter for demo: 3
