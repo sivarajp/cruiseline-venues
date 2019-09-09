@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: venue
-        image: mwrightregistry.azurecr.io/cruiseline-venues:latest
+        image: mwrightregistry.azurecr.io/cruiseline-venues-aks:latest
         ports:
         - containerPort: 8080
           name: server
