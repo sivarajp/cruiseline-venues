@@ -8,6 +8,6 @@ The entire process, the cluster, building and testing the app, clean up can be e
 
 Used for demo purposes
 
-Update counter for demo: 5
+Update counter for demo: 6
 
 ![Pipeline Image](https://github.com/mwright-pivotal/cruiseline-venues/raw/master/ci/pipeline-image.png)
