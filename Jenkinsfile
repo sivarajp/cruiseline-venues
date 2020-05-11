@@ -1,3 +1,3 @@
 buildDeploy{
-
+   platform = "java"
 }
