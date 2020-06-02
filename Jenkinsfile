@@ -1,5 +1,5 @@
 buildDeploy{
    platform = "java"
-   namespace = "checkout"
+   namespace = "account"
    project = "ecommerce"
 }
