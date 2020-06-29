@@ -1,4 +1,4 @@
-BuildMerge{
+BuildTBSDeploy{
    platform = "java"
    namespace = "account"
    project = "ecommerce"
